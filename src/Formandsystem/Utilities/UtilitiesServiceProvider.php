@@ -1,8 +1,8 @@
-<?php namespace Formandsystem\Utility;
+<?php namespace Formandsystem\Utilities;
 
 use Illuminate\Support\ServiceProvider;
 
-class UtilityServiceProvider extends ServiceProvider {
+class UtilitiesServiceProvider extends ServiceProvider {
 
 	/**
 	 * Indicates if loading of the provider is deferred.
@@ -16,7 +16,7 @@ class UtilityServiceProvider extends ServiceProvider {
    */
 	public function boot()
 	{
-		$this->package('formandsystem/Utility');
+		$this->package('formandsystem/Utilities');
 	}
 	
 	/**
@@ -26,15 +26,15 @@ class UtilityServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		$this->app['Utility'] = $this->app->share(function($app)
+		$this->app['Utilities'] = $this->app->share(function($app)
 		{
-			return new Utility;
+			return new Utilities;
 		});
 		
 		$this->app->booting(function()
 		{
 		  $loader = \Illuminate\Foundation\AliasLoader::getInstance();
-		  $loader->alias('Utility', 'Formandsystem\Utility\Facades\Utility');
+		  $loader->alias('Utilities', 'Formandsystem\Utilities\Facades\Utilities');
 		});
 	}
 
@@ -45,7 +45,7 @@ class UtilityServiceProvider extends ServiceProvider {
 	 */
 	public function provides()
 	{
-		return array('utility');
+		return array('utilities');
 	}
 
 }

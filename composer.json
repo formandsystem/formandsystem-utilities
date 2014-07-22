@@ -1,5 +1,5 @@
 {
-    "name": "formandsystem/utility",
+    "name": "formandsystem/utilities",
     "description": "",
     "authors": [
         {
@@ -13,7 +13,7 @@
     },
     "autoload": {
         "psr-0": {
-            "Formandsystem\\Utility\\": "src/"
+            "Formandsystem\\Utilities\\": "src/"
         }
     },
     "minimum-stability": "stable"

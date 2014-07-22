@@ -1,6 +1,6 @@
-<?php namespace Formandsystem\Utility;
+<?php namespace Formandsystem\Utilities;
 /*
- * Utility
+ * utilities
  *
  * (c) Lukas Oppermann – vea.re
  *
@@ -13,7 +13,7 @@
 use Log;
 use App;
 
-class Utility {
+class Utilities {
 	/**
 	 * variable
 	 *
