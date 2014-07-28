@@ -17,6 +17,7 @@ class UtilitiesServiceProvider extends ServiceProvider {
 	public function boot()
 	{
 		$this->package('formandsystem/Utilities');
+		include __DIR__.'/Filters/Cachefilters.php';
 	}
 	
 	/**

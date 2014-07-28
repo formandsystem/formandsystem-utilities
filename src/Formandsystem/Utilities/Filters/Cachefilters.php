@@ -1,3 +1,3 @@
 <?
-Route::filter('cache.fetch','\Formandsystem\Utilities\Cachefilter@fetch');
-Route::filter('cache.put','\Formandsystem\Utilities\Cachefilter@put');
+Route::filter('cache.fetch','Cachefilter@fetch');
+Route::filter('cache.put','Cachefilter@put');
