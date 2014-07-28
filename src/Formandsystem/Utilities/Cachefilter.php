@@ -14,9 +14,20 @@ use App;
 
 class Cachefilter {
 	/**
-	 * variable
+	 * fetch
 	 *
-	 * return variable or default
+	 * return cached data
+	 *
+	 * @access	public
+	 */
+	public function fetch(  )
+	{
+		return 'yo man';
+	}
+	/**
+	 * put
+	 *
+	 * save to cache
 	 *
 	 * @access	public
 	 */

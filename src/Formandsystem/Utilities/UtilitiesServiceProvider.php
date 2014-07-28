@@ -28,11 +28,11 @@ class UtilitiesServiceProvider extends ServiceProvider {
 	{
 		$this->app['Utilities'] = $this->app->share(function($app)
 		{
-			return new Utilities;
+			return new \Formandsystem\Utilities\Utilities;
 		});
 		$this->app['Cachefilter'] = $this->app->share(function($app)
 		{
-			return new Cachefilter;
+			return new \Formandsystem\Utilities\Cachefilter;
 		});
 				
 		$this->app->booting(function()
