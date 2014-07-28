@@ -1,6 +1,6 @@
 <?php namespace Formandsystem\Utilities;
 /*
- * utilities
+ * Cachefilter
  *
  * (c) Lukas Oppermann – vea.re
  *
@@ -10,7 +10,11 @@
  * @version
  */
 
-use App;
+use Illumiate\Routing\Route;
+use Illumiate\Http\Request;
+use Illumiate\Http\Response;
+use Str;
+use Cache;
 
 class Cachefilter {
 	/**
@@ -22,7 +26,10 @@ class Cachefilter {
 	 */
 	public function fetch(  )
 	{
-		return 'yo man';
+		$key = $this->makeCacheKey($request->url());
+		
+		if( Cache::has($key) ) return Cache::get($key);
+		
 	}
 	/**
 	 * put
@@ -33,6 +40,16 @@ class Cachefilter {
 	 */
 	public function fetch(  )
 	{
-		return 'yo man';
+		$key = $this->makeCacheKey($request->url());
+		
+		if( ! Cache::has($key) ) Cache::put($key, $response->getContent(),60);
+		
 	}
+	
+	
+	protected function makeCacheKey( $url )
+	{
+		Return 'route_'.Str::slug($url);
+	}
+	
 }
