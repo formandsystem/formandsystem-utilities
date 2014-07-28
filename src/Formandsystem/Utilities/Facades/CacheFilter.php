@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Facade;
 
-class CacheFilter extends Facade {
+class Cachefilter extends Facade {
 
     /**
      * Get the registered name of the component.

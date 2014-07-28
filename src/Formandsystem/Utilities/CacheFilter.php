@@ -12,7 +12,7 @@
 
 use App;
 
-class CacheFilter {
+class Cachefilter {
 	/**
 	 * variable
 	 *

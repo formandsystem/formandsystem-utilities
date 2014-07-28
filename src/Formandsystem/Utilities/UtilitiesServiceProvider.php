@@ -30,9 +30,9 @@ class UtilitiesServiceProvider extends ServiceProvider {
 		{
 			return new Utilities;
 		});
-		$this->app['CacheFilter'] = $this->app->share(function($app)
+		$this->app['Cachefilter'] = $this->app->share(function($app)
 		{
-			return new CacheFilter;
+			return new Cachefilter;
 		});
 				
 		$this->app->booting(function()
