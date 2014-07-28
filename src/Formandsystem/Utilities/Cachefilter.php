@@ -10,9 +10,6 @@
  * @version
  */
 
-use Illumiate\Routing\Route;
-use Illumiate\Http\Request;
-use Illumiate\Http\Response;
 use Str;
 use Cache;
 
@@ -24,7 +21,7 @@ class Cachefilter {
 	 *
 	 * @access	public
 	 */
-	public function fetch( Route $route, Request $request )
+	public function fetch( $route, $request )
 	{
 		$key = $this->makeCacheKey($request->url());
 		
@@ -38,7 +35,7 @@ class Cachefilter {
 	 *
 	 * @access	public
 	 */
-	public function put( Route $route, Request $request, Response $response )
+	public function put( $route, $request, $response )
 	{
 		$key = $this->makeCacheKey($request->url());
 		
