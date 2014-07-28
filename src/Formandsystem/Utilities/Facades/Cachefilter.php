@@ -9,6 +9,6 @@ class Cachefilter extends Facade {
      *
      * @return string
      */
-    protected static function getFacadeAccessor() { return 'cachefilter'; }
+    protected static function getFacadeAccessor() { return 'Cachefilter'; }
 
 }
