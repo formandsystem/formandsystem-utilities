@@ -24,7 +24,7 @@ class Cachefilter {
 	 *
 	 * @access	public
 	 */
-	public function fetch(  )
+	public function fetch( Route $route, Request $request )
 	{
 		$key = $this->makeCacheKey($request->url());
 		
@@ -38,7 +38,7 @@ class Cachefilter {
 	 *
 	 * @access	public
 	 */
-	public function fetch(  )
+	public function fetch( Route $route, Request $request, Response $response )
 	{
 		$key = $this->makeCacheKey($request->url());
 		
