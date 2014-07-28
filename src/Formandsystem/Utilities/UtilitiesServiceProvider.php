@@ -30,16 +30,16 @@ class UtilitiesServiceProvider extends ServiceProvider {
 		{
 			return new Utilities;
 		});
-		$this->app['Cache'] = $this->app->share(function($app)
+		$this->app['CacheFilter'] = $this->app->share(function($app)
 		{
-			return new Cache;
+			return new CacheFilter;
 		});
 				
 		$this->app->booting(function()
 		{
 		  $loader = \Illuminate\Foundation\AliasLoader::getInstance();
 		  $loader->alias('Utilities', 'Formandsystem\Utilities\Facades\Utilities');
-		  $loader->alias('Cache', 'Formandsystem\Utilities\Facades\Utilities');
+		  $loader->alias('Cachefilter', 'Formandsystem\Utilities\Facades\Cachefilter');
 		});
 	}
 
@@ -50,7 +50,7 @@ class UtilitiesServiceProvider extends ServiceProvider {
 	 */
 	public function provides()
 	{
-		return array('utilities','cache');
+		return array('utilities','cachefilter');
 	}
 
 }
