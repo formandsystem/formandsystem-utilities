@@ -38,7 +38,7 @@ class Cachefilter {
 	 *
 	 * @access	public
 	 */
-	public function fetch( Route $route, Request $request, Response $response )
+	public function put( Route $route, Request $request, Response $response )
 	{
 		$key = $this->makeCacheKey($request->url());
 		
