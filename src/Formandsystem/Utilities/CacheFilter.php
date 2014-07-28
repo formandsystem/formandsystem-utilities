@@ -13,7 +13,7 @@
 use Log;
 use App;
 
-class Cache {
+class CacheFilter {
 	/**
 	 * variable
 	 *
