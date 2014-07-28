@@ -49,7 +49,7 @@ class Cachefilter {
 	
 	protected function makeCacheKey( $url )
 	{
-		Return 'route_'.Str::slug($url);
+		return 'route_'.Str::slug($url);
 	}
 	
 }

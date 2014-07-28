@@ -39,7 +39,7 @@ class UtilitiesServiceProvider extends ServiceProvider {
 		{
 		  $loader = \Illuminate\Foundation\AliasLoader::getInstance();
 		  $loader->alias('Utilities', 'Formandsystem\Utilities\Facades\Utilities');
-		  $loader->alias('Cachefilter', 'Formandsystem\Utilities\Cachefilter');
+		  $loader->alias('Cachefilter', 'Formandsystem\Utilities\Facades\Cachefilter');
 		});
 	}
 
