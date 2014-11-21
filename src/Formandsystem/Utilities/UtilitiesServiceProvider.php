@@ -19,6 +19,7 @@ class UtilitiesServiceProvider extends ServiceProvider {
 	{
 		$this->package('formandsystem/Utilities');
 		include __DIR__.'/Filters/Cachefilters.php';
+		include __DIR__.'/UtilityFunctions.php';
 	}
 
 	/**

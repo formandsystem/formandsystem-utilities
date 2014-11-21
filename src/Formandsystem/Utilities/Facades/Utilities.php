@@ -9,6 +9,6 @@ class Utilities extends Facade {
      *
      * @return string
      */
-    protected static function getFacadeAccessor() { return 'Utilities'; }
+    protected static function getFacadeAccessor() { return 'utilities'; }
 
 }
