@@ -26,7 +26,6 @@ class Cachefilter {
 		$key = $this->makeCacheKey($request->url());
 
 		if( Cache::has($key) ) return Cache::get($key);
-
 	}
 	/**
 	 * put
@@ -46,7 +45,6 @@ class Cachefilter {
 			Cache::forever('cache.views', $keys);
 
 		}
-
 	}
 
 

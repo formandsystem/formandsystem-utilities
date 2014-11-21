@@ -36,12 +36,14 @@ class UtilitiesServiceProvider extends ServiceProvider {
 		{
 			return new \Formandsystem\Utilities\Cachefilter;
 		});
+
 		$this->app->booting(function()
 		{
 		  $loader = \Illuminate\Foundation\AliasLoader::getInstance();
 		  $loader->alias('Utilities', 'Formandsystem\Utilities\Facades\Utilities');
 		  $loader->alias('Cachefilter', 'Formandsystem\Utilities\Facades\Cachefilter');
 		});
+
 		// @TODO: use config like Config::get('utilities::cache.clearEvent'), but does not work
 		$this->app->events->listen('cache.cleared', 'Cachefilter@clear');
 	}
