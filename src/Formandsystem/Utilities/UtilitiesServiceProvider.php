@@ -29,10 +29,10 @@ class UtilitiesServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		$this->app['Utilities'] = $this->app->share(function($app)
-		{
-			return new \Formandsystem\Utilities\Utilities;
-		});
+		// $this->app['Utilities'] = $this->app->share(function($app)
+		// {
+		// 	return new \Formandsystem\Utilities\Utilities;
+		// });
 		$this->app['Cachefilter'] = $this->app->share(function($app)
 		{
 			return new \Formandsystem\Utilities\Cachefilter;
@@ -41,7 +41,7 @@ class UtilitiesServiceProvider extends ServiceProvider {
 		$this->app->booting(function()
 		{
 		  $loader = \Illuminate\Foundation\AliasLoader::getInstance();
-		  $loader->alias('Utilities', 'Formandsystem\Utilities\Facades\Utilities');
+		  // $loader->alias('Utilities', 'Formandsystem\Utilities\Facades\Utilities');
 		  $loader->alias('Cachefilter', 'Formandsystem\Utilities\Facades\Cachefilter');
 		});
 
