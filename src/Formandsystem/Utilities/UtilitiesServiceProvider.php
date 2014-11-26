@@ -18,7 +18,6 @@ class UtilitiesServiceProvider extends ServiceProvider {
 	public function boot()
 	{
 		$this->package('formandsystem/Utilities');
-		include __DIR__.'/Filters/Cachefilters.php';
 		include __DIR__.'/UtilityFunctions.php';
 	}
 
@@ -29,6 +28,7 @@ class UtilitiesServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
+		include __DIR__.'/Filters/Cachefilters.php';
 		// $this->app['Utilities'] = $this->app->share(function($app)
 		// {
 		// 	return new \Formandsystem\Utilities\Utilities;
